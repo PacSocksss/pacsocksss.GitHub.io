@@ -7,6 +7,8 @@
     loading
   </body>
   <script>
-     document.getElementByTagName("BODY").innerHTML = marked('# Error 503\n\n## This page is not ready for use.');
+     () => {
+       document.getElementByTagName("BODY").innerHTML = marked('# Error 503\n\n## This page is not ready for use.');
+     };
   </script>
 </html>
