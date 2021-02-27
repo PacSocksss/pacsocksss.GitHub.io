@@ -1,11 +1,11 @@
 function dcss(file) {
-  if (file === undefined) {
-    file = 
+  if (document.head[1] === undefined) {
+    var head1 = document.createElement('head');
+    document.appendChild(head1);
   }
-  var head = document.head[1];
-  var link = head.createElement('link');
+  var link = document.createElement('link');
   link.setAttribute('rel','stylesheet');
   link.setAttribute('type','text/css');
   link.setAttribute('href',file);
-  document.head[0].appendChild(link);
+  document.head[1].appendChild(link);
 }
